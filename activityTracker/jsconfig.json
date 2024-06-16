@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2021", // Specifies the JavaScript language version
+    "module": "commonjs", // Specifies the module system (CommonJS for Node.js)
+    "baseUrl": "./", // Base directory to resolve non-relative module names
+    "paths": {
+      "@/*": ["./src/*"], // Example alias for components
+    }
+  },
+  "exclude": ["node_modules"]
+}
