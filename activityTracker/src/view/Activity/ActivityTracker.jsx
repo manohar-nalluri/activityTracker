@@ -3,11 +3,16 @@ import axios from '../../Api/axios'
 import Card from './Card'
 import { useToast } from '@/components/ui/use-toast'
 import Add from './Add'
+import {  useNavigate } from 'react-router-dom'
 
 const ActivityTracker = () => {
+  const navigate=useNavigate()
   const {toast}=useToast()
   const [toggle,setToggle]=useState(false)
   const errorHandler=(err)=>{
+    if(err.response.status===401){
+      navigate('/login')
+    }
     if(err.response.data.message){
           toast({description:err.response.data.message,
           variant:"destructive",duration:2000})}
