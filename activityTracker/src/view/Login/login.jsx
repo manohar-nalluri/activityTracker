@@ -10,13 +10,7 @@ const Login = () => {
   const [password,setPassword]=useState('')
 
   const {toast}=useToast()
-  const handleEmail=(e)=>{
-    setEmail(e.target.value)
-  }
 
-  const handlePassword=(e)=>{
-    setPassword(e.target.value)
-  }
 
   const handleSubmit=async(e)=>{
     e.preventDefault()
