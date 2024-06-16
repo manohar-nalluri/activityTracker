@@ -11,6 +11,9 @@ const ActivityTracker = () => {
   const [toggle,setToggle]=useState(false)
   const errorHandler=(err)=>{
     if(err.response.status===401){
+       toast({description:'Please enable third party cookies to access this site',
+      variant:"destructive",duration:2000})}
+
       navigate('/login')
     }
     if(err.response.data.message){
