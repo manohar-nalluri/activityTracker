@@ -7,6 +7,7 @@ const app=express()
 app.use(cors({
   origin:  process.env.ALLOW_URL,
   credentials: true, 
+  methods: ['GET', 'POST','PATCH','DELETE'],
   optionsSuccessStatus: 200
 }));
 //middlewares
