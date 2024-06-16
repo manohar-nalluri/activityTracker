@@ -1,10 +1,12 @@
 import APIError from "../utils/APIError.js";
 import  jwt from "jsonwebtoken";
 import asyncHandler from "../utils/asyncHandler.js";
-import APIResponse from "../utils/APIResponse.js";
 
 const verifyAuth=asyncHandler(async(req,res,next)=>{
   const cokkie=req.cookies?.accessToken
+  console.log(req.cookies)
+  console.log(cokkie)
+  console.log(cokkie)
   if(!cokkie) throw new APIError(401,"unAuthorized access")
   jwt.verify(cokkie,process.env.JWT_SECRET,(err,user)=>{
     if(err){

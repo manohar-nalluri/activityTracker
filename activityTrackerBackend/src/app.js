@@ -5,7 +5,7 @@ import cors from "cors"
 const app=express()
 
 app.use(cors({
-  origin: process.env.ALLOW_URL,
+  origin:  "http://localhost:5173",
   credentials: true, 
   optionsSuccessStatus: 200
 }));

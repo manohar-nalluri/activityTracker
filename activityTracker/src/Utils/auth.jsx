@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 
 const useAuth = () => {
-  const token = Cookies.get('jwt');
+  const token = Cookies.get('accessToken');
+  console.log(token)
   return !!token; 
 };
 
