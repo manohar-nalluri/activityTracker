@@ -12,9 +12,10 @@ const ActivityTracker = () => {
   const errorHandler=(err)=>{
     if(err.response.status===401){
        toast({description:'Please enable third party cookies to access this site',
-      variant:"destructive",duration:2000})}
+      variant:"destructive",duration:4000})
 
       navigate('/login')
+    return
     }
     if(err.response.data.message){
           toast({description:err.response.data.message,
