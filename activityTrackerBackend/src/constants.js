@@ -1,12 +1,12 @@
 export const accessCookieOptions = {
         maxAge: 1000 * 60 * 1440,
-        httpOnly: true, 
+        // httpOnly: true, 
         // signed: true,
         secure:true
     }
 export const refreshCookieOption = {
   maxAge:1000 * 60 * 1440 * 10,
-  httpOnly:true,
+  // httpOnly:true,
   secure:true
 }
 
